@@ -50,11 +50,11 @@ function draw() {
   }
   
   if(gameState===PLAY){
-    path.velocityY = 4;
-    cashG.setVelocityYEach(3);
-    diamondsG.setVelocityYEach(3);
-    jwelleryG.setVelocityYEach(3);
-    swordGroup.setVelocityYEach(3);
+    path.velocityY = (4+score/600);
+    cashG.setVelocityYEach(3+score/600);
+    diamondsG.setVelocityYEach(3+score/600);
+    jwelleryG.setVelocityYEach(3+score/600);
+    swordGroup.setVelocityYEach(3+score/600);
     if (cashG.isTouching(boy)) {
       cashG.destroyEach();
       treasureCollection= treasureCollection+50
